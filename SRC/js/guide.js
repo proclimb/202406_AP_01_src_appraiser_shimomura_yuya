@@ -12,6 +12,8 @@ function fnGuideEditCheck() {
 		if (tmp.value == '') { alert(msg + "案内日(開始日付)を入力してください"); return; }
 		if (!fnYMDCheck(msg + "開始日付には正しい日付", tmp)) { return; }
 		if (!fnYMDCheck(msg + "開始日付には正しい日付", getEditObject(i, "guideStartDT"))) { return; }
+		tmp = getEditObject(i, "guideEndDT");
+		if (tmp.value == '') { alert(msg + "案内日(終了日付)を入力してください"); return; }
 		if (!fnYMDCheck(msg + "終了日付には正しい日付", getEditObject(i, "guideEndDT"))) { return; }
 		if (isLength(100, msg + "担当", getEditObject(i, "charge"))) { return; }
 		if (isLength(100, msg + "営業店", getEditObject(i, "name"))) { return; }
